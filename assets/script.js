@@ -36,6 +36,7 @@ const panels = {
 	},
 
 	"Reactions": {
+		"All Reactions": [],
 		"Composite": [],
 		"Biochemical": [],
 		"Hybrid": [],
@@ -115,9 +116,9 @@ const serviceModules = {
 		copying: ['Standup Hyasyoda Research Lab', 'Standup Research Lab I']
 	},
 	reaction: {
-		drug: "Standup Biochemical Reactor I",
-		t2: "Standup Composite Reactor I",
-		t3: "Standup Hybrid Reactor I",
+		biochemical: "Standup Biochemical Reactor I",
+		composite: "Standup Composite Reactor I",
+		hybrid: "Standup Hybrid Reactor I",
 	},
 	reprocessing: {
 		all: ["Standup Reprocessing Facility I"]
@@ -186,6 +187,22 @@ const structureRigs = {
 			],
 			xl: []
 		},
+		modulesRigs: {
+			l: [
+				"Standup L-Set Equipment Manufacturing Efficiency I",
+				"Standup L-Set Equipment Manufacturing Efficiency II"
+			],
+			m: [
+				"Standup M-Set Equipment Manufacturing Material Efficiency I",
+				"Standup M-Set Equipment Manufacturing Material Efficiency II",
+				"Standup M-Set Equipment Manufacturing Time Efficiency I",
+				"Standup M-Set Equipment Manufacturing Time Efficiency II"
+			],
+			xl: [
+				"Standup XL-Set Equipment and Consumable Manufacturing Efficiency I",
+				"Standup XL-Set Equipment and Consumable Manufacturing Efficiency II"
+			],
+		},
 		component: {
 			l: [
 				"Standup L-Set Advanced Component Manufacturing Efficiency I",
@@ -193,7 +210,8 @@ const structureRigs = {
 				"Standup L-Set Basic Capital Component Manufacturing Efficiency I",
 				"Standup L-Set Basic Capital Component Manufacturing Efficiency II",
 				"Standup L-Set Thukker Advanced Component Manufacturing Efficiency",
-				"Standup L-Set Thukker Basic Capital Component Manufacturing Efficiency"
+				"Standup L-Set Thukker Basic Capital Component Manufacturing Efficiency",
+				"Standup XL-Set Thukker Structure and Component Manufacturing Efficiency"
 			],
 			m: [
 				"Standup M-Set Advanced Component Manufacturing Material Efficiency I",
@@ -203,7 +221,9 @@ const structureRigs = {
 				"Standup M-Set Basic Capital Component Manufacturing Material Efficiency I",
 				"Standup M-Set Basic Capital Component Manufacturing Material Efficiency II",
 				"Standup M-Set Basic Capital Component Manufacturing Time Efficiency I",
-				"Standup M-Set Basic Capital Component Manufacturing Time Efficiency II"
+				"Standup M-Set Basic Capital Component Manufacturing Time Efficiency II",
+				"Standup M-Set Thukker Advanced Component Manufacturing Material Efficiency",
+				"Standup M-Set Thukker Basic Capital Component Manufacturing Material Efficiency"
 			],
 			xl: []
 		},
@@ -222,24 +242,16 @@ const structureRigs = {
 		},
 		structure: {
 			l: [
-				"Standup L-Set Equipment Manufacturing Efficiency I",
-				"Standup L-Set Equipment Manufacturing Efficiency II",
 				"Standup L-Set Structure Manufacturing Efficiency I",
 				"Standup L-Set Structure Manufacturing Efficiency II"
 			],
 			m: [
-				"Standup M-Set Equipment Manufacturing Material Efficiency I",
-				"Standup M-Set Equipment Manufacturing Material Efficiency II",
-				"Standup M-Set Equipment Manufacturing Time Efficiency I",
-				"Standup M-Set Equipment Manufacturing Time Efficiency II",
 				"Standup M-Set Structure Manufacturing Material Efficiency I",
 				"Standup M-Set Structure Manufacturing Material Efficiency II",
 				"Standup M-Set Structure Manufacturing Time Efficiency I",
 				"Standup M-Set Structure Manufacturing Time Efficiency II"
 			],
 			xl: [
-				"Standup XL-Set Equipment and Consumable Manufacturing Efficiency I",
-				"Standup XL-Set Equipment and Consumable Manufacturing Efficiency II",
 				"Standup XL-Set Structure and Component Manufacturing Efficiency I",
 				"Standup XL-Set Structure and Component Manufacturing Efficiency II"
 			]
@@ -289,17 +301,10 @@ const structureRigs = {
 		}
 	},
 	reaction: {
-		l: [
+		all: [
 			"Standup L-Set Reactor Efficiency I",
 			"Standup L-Set Reactor Efficiency II"
 		],
-		m: [
-			"Standup M-Set Thukker Advanced Component Manufacturing Material Efficiency",
-			"Standup M-Set Thukker Basic Capital Component Manufacturing Material Efficiency"
-		],
-		xl: [
-			"Standup XL-Set Thukker Structure and Component Manufacturing Efficiency"
-		]
 	},
 	reprocessing: {
 		l: [
@@ -361,7 +366,177 @@ function convertToJSON() {
 	return jsonResult;
 }
 
+function mapStationsToPanels(systems) {
+	// Iterate over each system
+	Object.entries(systems).forEach(([system, stations]) => {
+		// Iterate over each station in the system
+		stations.forEach(station => {
+			const { name, rigs, services, type } = station;
+			const priority = 0;
+
+			// Skip if no rigs are found (unrigged station)
+			if (!rigs || rigs.length === 0) return;
+
+			// Determine the ME and TE rig levels from the rigs
+			const meRigged = rigs.some(rig => rig.includes('Material Efficiency'))
+				? rigs.some(rig => rig.endsWith("I")) ? 'T1' : 'T2'
+				: null;
+
+			const teRigged = rigs.some(rig => rig.includes('Time Efficiency'))
+				? rigs.some(rig => rig.endsWith("I")) ? 'T1' : 'T2'
+				: null;
+
+			// Determine the rig size based on the station's type from upwellStructures
+			const rigSize = upwellStructures.citadels[type]?.rigSize
+				|| upwellStructures.refineries[type]?.rigSize
+				|| upwellStructures.engineeringComplexes[type]?.rigSize;
+
+			if (!rigSize) return; // Skip if no matching rig size is found
+
+			// Iterate through each rig to categorize
+			rigs.forEach(rig => {
+				// Check for each rig category based on the structureRigs object
+				// Manufacturing Category
+				if (structureRigs.manufacturing.ship[rigSize] && structureRigs.manufacturing.ship[rigSize].includes(rig)) {
+					panels["Ship Manufacturing"]["All Subcapitals"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				} else if (structureRigs.manufacturing.component[rigSize] && structureRigs.manufacturing.component[rigSize].includes(rig)) {
+					panels["Components"]["T1 Capital Components"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				} else if (structureRigs.manufacturing.drone[rigSize] && structureRigs.manufacturing.drone[rigSize].includes(rig)) {
+					panels["Specialist Manufacturing"]["T1/T2 Drones & Fighters"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				} else if (structureRigs.manufacturing.modulesRigs[rigSize] && structureRigs.manufacturing.modulesRigs[rigSize].includes(rig)) {
+					panels["Specialist Manufacturing"]["T1/T2 Modules & Rigs"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				} else if (structureRigs.manufacturing.structure[rigSize] && structureRigs.manufacturing.structure[rigSize].includes(rig)) {
+					panels["Specialist Manufacturing"]["Structures"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				} else if (structureRigs.manufacturing.charge[rigSize] && structureRigs.manufacturing.charge[rigSize].includes(rig)) {
+					panels["Specialist Manufacturing"]["Ammo"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				}
+
+				// Science Category
+				else if (structureRigs.science.invention[rigSize] && structureRigs.science.invention[rigSize].includes(rig)) {
+					panels["Science"]["T2 Invention"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				} else if (structureRigs.science.research[rigSize] && structureRigs.science.research[rigSize].includes(rig)) {
+					if (meRigged) {
+						panels["Science"]["Researching ME"].push({
+							system,
+							name,
+							rigSize,
+							meRigged,
+							teRigged,
+							priority,
+							services
+						});
+					}
+					if (teRigged) {
+						panels["Science"]["Researching TE"].push({
+							system,
+							name,
+							rigSize,
+							meRigged,
+							teRigged,
+							priority,
+							services
+						});
+					}
+				} else if (structureRigs.science.copying[rigSize] && structureRigs.science.copying[rigSize].includes(rig)) {
+					panels["Science"]["BPC Copying"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				}
+
+				// Reaction Category
+				else if (structureRigs.reaction.all.includes(rig)) {
+					panels["Reactions"]["All Reactions"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				}
+
+				// Reprocessing Category
+				else if (structureRigs.reprocessing.l.includes(rig)) {
+					panels["Reprocessing"]["Asteroid Reprocessing"].push({
+						system,
+						name,
+						rigSize,
+						meRigged,
+						teRigged,
+						priority,
+						services
+					});
+				}
+			});
+		});
+	});
+}
+
 function runConversion() {
 	const jsonResult = convertToJSON();
-	document.getElementById('jsonOutput').textContent = JSON.stringify(jsonResult, null, 4);
+	mapStationsToPanels( jsonResult )
+	document.getElementById('jsonOutput').textContent = JSON.stringify(panels, null, 4);
 }
