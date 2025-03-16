@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   basePath: isProd ? "/webtools" : "",
   trailingSlash: true,
   output: "export",
+  distDir: "_site",
   images: {
     unoptimized: true
   }
