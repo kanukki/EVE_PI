@@ -29,9 +29,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Export static files
-        run: npm run export
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
