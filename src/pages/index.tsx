@@ -1,10 +1,10 @@
-import { useState } from "react";
+import {BaseSyntheticEvent, useState} from "react";
 import Nav from "@/components/Nav";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const closeMenu = (e: any) => {
+  const closeMenu = (e: BaseSyntheticEvent) => {
     if (isOpen && !e.target.closest("nav") && !e.target.closest("button")) {
       setIsOpen(false);
     }
