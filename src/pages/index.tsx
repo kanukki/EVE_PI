@@ -55,7 +55,7 @@ export default function Home() {
           {/* Main Area */}
           <main className="flex-1">
             <h1 className="text-2xl font-semibold">Welcome</h1>
-            <p className="mt-2 text-gray-600">Pardon the dust, I'm cleaning things up so I can build this .IO site with Typescript.</p>
+            <p className="mt-2 text-gray-600">Pardon the dust, I am cleaning things up so I can build this .IO site with Typescript.</p>
           </main>
 
           {/* Footer */}
