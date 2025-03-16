@@ -15,7 +15,7 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white shadow-md flex items-center justify-between p-4 w-full relative z-50">
         {/* Logo */}
-        <div className="text-xl font-bold">LOGO</div>
+        <div className="text-xl font-bold">WebTools - Jay</div>
 
         {/* Desktop Navigation - Aligned right */}
         <nav className="hidden md:flex ml-auto space-x-6 items-center h-full"> {/* Ensure nav takes full height */}
@@ -53,7 +53,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="bg-white p-4 text-center text-gray-600">
-          &copy; {new Date().getFullYear()} Your Company
+          &copy; {new Date().getFullYear()} JayCodesIt.com
         </footer>
       </div>
     </div>
