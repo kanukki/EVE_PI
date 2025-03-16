@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const closeMenu = (e) => {
+  const closeMenu = (e: any) => {
     if (isOpen && !e.target.closest("nav") && !e.target.closest("button")) {
       setIsOpen(false);
     }
