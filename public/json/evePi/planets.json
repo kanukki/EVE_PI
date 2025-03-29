@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Temperate",
+    "types": [
+      "Water", "Industrial Fibers", "Biofuels", "Proteins", "Bacteria"
+    ]
+  },
+  {
+    "name": "Ice",
+    "types": [
+      "Water", "Heavy Metals", "Bacteria", "Oxygen", "Biomass"
+    ]
+  },
+  {
+    "name": "Barren",
+    "types": [
+      "Water", "Reactive Metals", "Biofuels", "Bacteria", "Precious Metals"
+    ]
+  },
+  {
+    "name": "Gas",
+    "types": [
+      "Water", "Reactive Metals", "Electrolytes", "Oxygen", "Oxidizing Compound"
+    ]
+  },
+  {
+    "name": "Lava",
+    "types": [
+      "Base Metals", "Silicon", "Toxic Metals", "Chiral Structures", "Plasmoids"
+    ]
+  },
+  {
+    "name": "Oceanic",
+    "types": [
+      "Water", "Biofuels", "Proteins", "Bacteria", "Biomass"
+    ]
+  },
+  {
+    "name": "Plasma",
+    "types": [
+      "Reactive Metals", "Toxic Metals", "Precious Metals", "Chiral Structures", "Plasmoids"
+    ]
+  },
+  {
+    "name": "Storm",
+    "types": [
+      "Water", "Reactive Metals", "Electrolytes", "Oxygen", "Plasmoids"
+    ]
+  }
+]

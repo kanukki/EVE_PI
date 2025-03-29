@@ -1,0 +1,20 @@
+[
+  { "typeID": 2469, "name": "Lava Basic Industry Facility", "tier": "P1" },
+  { "typeID": 2470, "name": "Lava Advanced Industry Facility", "tier": [ "P2", "P3" ] },
+  { "typeID": 2471, "name": "Plasma Basic Industry Facility", "tier":  "P1" },
+  { "typeID": 2472, "name": "Plasma Advanced Industry Facility", "tier": [ "P2", "P3" ] },
+  { "typeID": 2473, "name": "Barren Basic Industry Facility", "tier":  "P1" },
+  { "typeID": 2474, "name": "Barren Advanced Industry Facility", "tier": [ "P2", "P3" ] },
+  { "typeID": 2480, "name": "Temperate Advanced Industry Facility", "tier": [ "P2", "P3" ] },
+  { "typeID": 2481, "name": "Temperate Basic Industry Facility", "tier":  "P1" },
+  { "typeID": 2483, "name": "Storm Basic Industry Facility", "tier":  "P1" },
+  { "typeID": 2484, "name": "Storm Advanced Industry Facility", "tier": [ "P2", "P3" ] },
+  { "typeID": 2485, "name": "Oceanic Advanced Industry Facility", "tier": [ "P2", "P3" ] },
+  { "typeID": 2490, "name": "Oceanic Basic Industry Facility", "tier":  "P1" },
+  { "typeID": 2491, "name": "Ice Advanced Industry Facility", "tier": [ "P2", "P3" ] },
+  { "typeID": 2492, "name": "Gas Basic Industry Facility", "tier":  "P1" },
+  { "typeID": 2493, "name": "Ice Basic Industry Facility", "tier":  "P1" },
+  { "typeID": 2494, "name": "Gas Advanced Industry Facility", "tier": [ "P2", "P3" ] },
+  { "typeID": 2475, "name": "Barren High-Tech Production Plant", "tier":  [ "P4" ] },
+  { "typeID": 2482, "name": "Temperate High-Tech Production Plant", "tier":  [ "P4" ] }
+]

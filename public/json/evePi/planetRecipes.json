@@ -1,0 +1,749 @@
+[
+    {
+        "schematicID": 65,
+        "typeID": 9838,
+        "name": "Superconductors",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2389,
+            3645
+        ]
+    },
+    {
+        "schematicID": 66,
+        "typeID": 9832,
+        "name": "Coolant",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2390,
+            3645
+        ]
+    },
+    {
+        "schematicID": 67,
+        "typeID": 9830,
+        "name": "Rocket Fuel",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2389,
+            2390
+        ]
+    },
+    {
+        "schematicID": 68,
+        "typeID": 3691,
+        "name": "Synthetic Oil",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2390,
+            3683
+        ]
+    },
+    {
+        "schematicID": 69,
+        "typeID": 2317,
+        "name": "Oxides",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2392,
+            3683
+        ]
+    },
+    {
+        "schematicID": 70,
+        "typeID": 3697,
+        "name": "Silicate Glass",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2392,
+            9828
+        ]
+    },
+    {
+        "schematicID": 71,
+        "typeID": 9840,
+        "name": "Transmitter",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2389,
+            2401
+        ]
+    },
+    {
+        "schematicID": 72,
+        "typeID": 2328,
+        "name": "Water-Cooled CPU",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2398,
+            3645
+        ]
+    },
+    {
+        "schematicID": 73,
+        "typeID": 3689,
+        "name": "Mechanical Parts",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2398,
+            2399
+        ]
+    },
+    {
+        "schematicID": 74,
+        "typeID": 3828,
+        "name": "Construction Blocks",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2398,
+            2400
+        ]
+    },
+    {
+        "schematicID": 75,
+        "typeID": 44,
+        "name": "Enriched Uranium",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2399,
+            2400
+        ]
+    },
+    {
+        "schematicID": 76,
+        "typeID": 9836,
+        "name": "Consumer Electronics",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2400,
+            2401
+        ]
+    },
+    {
+        "schematicID": 77,
+        "typeID": 9842,
+        "name": "Miniature Electronics",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2401,
+            9828
+        ]
+    },
+    {
+        "schematicID": 78,
+        "typeID": 2463,
+        "name": "Nanites",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2393,
+            2398
+        ]
+    },
+    {
+        "schematicID": 79,
+        "typeID": 2329,
+        "name": "Biocells",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2396,
+            2399
+        ]
+    },
+    {
+        "schematicID": 80,
+        "typeID": 2327,
+        "name": "Microfiber Shielding",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2397,
+            9828
+        ]
+    },
+    {
+        "schematicID": 81,
+        "typeID": 3775,
+        "name": "Viral Agent",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2393,
+            3779
+        ]
+    },
+    {
+        "schematicID": 82,
+        "typeID": 3693,
+        "name": "Fertilizer",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2393,
+            2395
+        ]
+    },
+    {
+        "schematicID": 83,
+        "typeID": 15317,
+        "name": "Genetically Enhanced Livestock",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2395,
+            3779
+        ]
+    },
+    {
+        "schematicID": 84,
+        "typeID": 3725,
+        "name": "Livestock",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2395,
+            2396
+        ]
+    },
+    {
+        "schematicID": 85,
+        "typeID": 3695,
+        "name": "Polytextiles",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2396,
+            2397
+        ]
+    },
+    {
+        "schematicID": 86,
+        "typeID": 2319,
+        "name": "Test Cultures",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2393,
+            3645
+        ]
+    },
+    {
+        "schematicID": 87,
+        "typeID": 2312,
+        "name": "Supertensile Plastics",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            3683,
+            3779
+        ]
+    },
+    {
+        "schematicID": 88,
+        "typeID": 2321,
+        "name": "Polyaramids",
+        "inputQty": 40,
+        "outputQty": 5,
+        "requireTypeID": [
+            2392,
+            2397
+        ]
+    },
+    {
+        "schematicID": 89,
+        "typeID": 17136,
+        "name": "Ukomi Superconductors",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            3691,
+            9838
+        ]
+    },
+    {
+        "schematicID": 90,
+        "typeID": 2344,
+        "name": "Condensates",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2317,
+            9832
+        ]
+    },
+    {
+        "schematicID": 91,
+        "typeID": 2345,
+        "name": "Camera Drones",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            3697,
+            9830
+        ]
+    },
+    {
+        "schematicID": 92,
+        "typeID": 2346,
+        "name": "Synthetic Synapses",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2312,
+            2319
+        ]
+    },
+    {
+        "schematicID": 94,
+        "typeID": 17898,
+        "name": "High-Tech Transmitters",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2321,
+            9840
+        ]
+    },
+    {
+        "schematicID": 95,
+        "typeID": 2348,
+        "name": "Gel-Matrix Biopaste",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2317,
+            2329,
+            9838
+        ]
+    },
+    {
+        "schematicID": 96,
+        "typeID": 2349,
+        "name": "Supercomputers",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2328,
+            9832,
+            9836
+        ]
+    },
+    {
+        "schematicID": 97,
+        "typeID": 9848,
+        "name": "Robotics",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            3689,
+            9836
+        ]
+    },
+    {
+        "schematicID": 98,
+        "typeID": 2351,
+        "name": "Smartfab Units",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            3828,
+            9842
+        ]
+    },
+    {
+        "schematicID": 99,
+        "typeID": 2352,
+        "name": "Nuclear Reactors",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            44,
+            2327
+        ]
+    },
+    {
+        "schematicID": 100,
+        "typeID": 9834,
+        "name": "Guidance Systems",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2328,
+            9840
+        ]
+    },
+    {
+        "schematicID": 102,
+        "typeID": 2354,
+        "name": "Neocoms",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2329,
+            3697
+        ]
+    },
+    {
+        "schematicID": 103,
+        "typeID": 9846,
+        "name": "Planetary Vehicles",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2312,
+            3689,
+            9842
+        ]
+    },
+    {
+        "schematicID": 104,
+        "typeID": 2358,
+        "name": "Biotech Research Reports",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2463,
+            3725,
+            3828
+        ]
+    },
+    {
+        "schematicID": 105,
+        "typeID": 28974,
+        "name": "Vaccines",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            3725,
+            3775
+        ]
+    },
+    {
+        "schematicID": 106,
+        "typeID": 2360,
+        "name": "Industrial Explosives",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            3693,
+            3695
+        ]
+    },
+    {
+        "schematicID": 107,
+        "typeID": 2361,
+        "name": "Hermetic Membranes",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2321,
+            15317
+        ]
+    },
+    {
+        "schematicID": 108,
+        "typeID": 12836,
+        "name": "Transcranial Microcontrollers",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2329,
+            2463
+        ]
+    },
+    {
+        "schematicID": 109,
+        "typeID": 17392,
+        "name": "Data Chips",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2312,
+            2327
+        ]
+    },
+    {
+        "schematicID": 110,
+        "typeID": 2366,
+        "name": "Hazmat Detection Systems",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            3695,
+            3775,
+            9840
+        ]
+    },
+    {
+        "schematicID": 111,
+        "typeID": 2367,
+        "name": "Cryoprotectant Solution",
+        "inputQty": 10,
+        "outputQty": 3,
+        "requireTypeID": [
+            2319,
+            3691,
+            3693
+        ]
+    },
+    {
+        "schematicID": 112,
+        "typeID": 2870,
+        "name": "Organic Mortar Applicators",
+        "inputQty": 6,
+        "outputQty": 1,
+        "requireTypeID": [
+            2344,
+            2393,
+            9848
+        ]
+    },
+    {
+        "schematicID": 113,
+        "typeID": 2875,
+        "name": "Sterile Conduits",
+        "inputQty": 6,
+        "outputQty": 1,
+        "requireTypeID": [
+            2351,
+            3645,
+            28974
+        ]
+    },
+    {
+        "schematicID": 114,
+        "typeID": 2869,
+        "name": "Nano-Factory",
+        "inputQty": 6,
+        "outputQty": 1,
+        "requireTypeID": [
+            2360,
+            2398,
+            17136
+        ]
+    },
+    {
+        "schematicID": 115,
+        "typeID": 2872,
+        "name": "Self-Harmonizing Power Core",
+        "inputQty": 6,
+        "outputQty": 1,
+        "requireTypeID": [
+            2345,
+            2352,
+            2361
+        ]
+    },
+    {
+        "schematicID": 116,
+        "typeID": 2871,
+        "name": "Recursive Computing Module",
+        "inputQty": 6,
+        "outputQty": 1,
+        "requireTypeID": [
+            2346,
+            9834,
+            12836
+        ]
+    },
+    {
+        "schematicID": 117,
+        "typeID": 2867,
+        "name": "Broadcast Node",
+        "inputQty": 6,
+        "outputQty": 1,
+        "requireTypeID": [
+            2354,
+            17392,
+            17898
+        ]
+    },
+    {
+        "schematicID": 118,
+        "typeID": 2868,
+        "name": "Integrity Response Drones",
+        "inputQty": 6,
+        "outputQty": 1,
+        "requireTypeID": [
+            2348,
+            2366,
+            9846
+        ]
+    },
+    {
+        "schematicID": 119,
+        "typeID": 2876,
+        "name": "Wetware Mainframe",
+        "inputQty": 6,
+        "outputQty": 1,
+        "requireTypeID": [
+            2349,
+            2358,
+            2367
+        ]
+    },
+    {
+        "schematicID": 121,
+        "typeID": 3645,
+        "name": "Water",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2268
+        ]
+    },
+    {
+        "schematicID": 122,
+        "typeID": 2389,
+        "name": "Plasmoids",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2308
+        ]
+    },
+    {
+        "schematicID": 123,
+        "typeID": 2390,
+        "name": "Electrolytes",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2309
+        ]
+    },
+    {
+        "schematicID": 124,
+        "typeID": 3683,
+        "name": "Oxygen",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2310
+        ]
+    },
+    {
+        "schematicID": 125,
+        "typeID": 2392,
+        "name": "Oxidizing Compound",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2311
+        ]
+    },
+    {
+        "schematicID": 126,
+        "typeID": 2398,
+        "name": "Reactive Metals",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2267
+        ]
+    },
+    {
+        "schematicID": 127,
+        "typeID": 2399,
+        "name": "Precious Metals",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2270
+        ]
+    },
+    {
+        "schematicID": 128,
+        "typeID": 2400,
+        "name": "Toxic Metals",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2272
+        ]
+    },
+    {
+        "schematicID": 129,
+        "typeID": 2401,
+        "name": "Chiral Structures",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2306
+        ]
+    },
+    {
+        "schematicID": 130,
+        "typeID": 9828,
+        "name": "Silicon",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2307
+        ]
+    },
+    {
+        "schematicID": 131,
+        "typeID": 2393,
+        "name": "Bacteria",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2073
+        ]
+    },
+    {
+        "schematicID": 132,
+        "typeID": 3779,
+        "name": "Biomass",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2286
+        ]
+    },
+    {
+        "schematicID": 133,
+        "typeID": 2395,
+        "name": "Proteins",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2287
+        ]
+    },
+    {
+        "schematicID": 134,
+        "typeID": 2396,
+        "name": "Biofuels",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2288
+        ]
+    },
+    {
+        "schematicID": 135,
+        "typeID": 2397,
+        "name": "Industrial Fibers",
+        "inputQty": 3000,
+        "outputQty": 20,
+        "requireTypeID": [
+            2305
+        ]
+    }
+]
