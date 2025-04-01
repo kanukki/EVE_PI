@@ -6,7 +6,7 @@ const planetRecipes = require( '../public/json/evePi/planetRecipes.json');
 const fs = require('fs');
 const path = require('path');
 
-const baseFile = fs.readFileSync( 'public/json/evePi/basefile.json' );
+const baseFile = fs.readFileSync( 'public/json/evePi/p1-2-base.json' );
 let output = baseFile.toString();
 
 let group = 1;

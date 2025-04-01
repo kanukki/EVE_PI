@@ -65,14 +65,18 @@
     "Ukomi Super Conductors",
     "Vaccines"
   ],
-  "P4": [
-    "Broadcast Node",
-    "Integrity Response Drones",
-    "Nano-Factory",
-    "Organic Mortar Applicators",
-    "Recursive Computing Module",
-    "Self-Harmonizing Power Core",
-    "Sterile Conduits",
-    "Wetware Mainframe"
-  ]
+  "P4": {
+    "3x": [
+      "Broadcast Node",
+      "Recursive Computing Module",
+      "Self-Harmonizing Power Core"
+    ],
+    "special": [
+      "Integrity Response Drones",
+      "Nano-Factory",
+      "Organic Mortar Applicators",
+      "Sterile Conduits",
+      "Wetware Mainframe"
+    ]
+  }
 }
