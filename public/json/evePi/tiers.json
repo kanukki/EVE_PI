@@ -44,39 +44,35 @@
   ],
   "P3": [
     "Biotech Research Reports",
+    "Cryoprotectant Solution",
+    "Gel-Matrix Biopaste",
+    "Hazmat Detection Systems",
+    "Planetary Vehicles",
+    "Supercomputers",
     "Camera Drones",
     "Condensates",
-    "Cryoprotectant Solution",
     "Data Chips",
-    "Gel-Matrix Biopaste",
     "Guidance Systems",
-    "Hazmat Detection Systems",
     "Hermetic Membranes",
     "High-Tech Transmitters",
     "Industrial Explosives",
     "Neocoms",
     "Nuclear Reactors",
-    "Planetary Vehicles",
     "Robotics",
     "Smartfab Units",
-    "Supercomputers",
     "Synthetic Synapses",
     "Transcranial Microcontrollers",
     "Ukomi Super Conductors",
     "Vaccines"
   ],
-  "P4": {
-    "3x": [
-      "Broadcast Node",
-      "Recursive Computing Module",
-      "Self-Harmonizing Power Core"
-    ],
-    "special": [
-      "Integrity Response Drones",
-      "Nano-Factory",
-      "Organic Mortar Applicators",
-      "Sterile Conduits",
-      "Wetware Mainframe"
-    ]
-  }
+  "P4": [
+    "Broadcast Node",
+    "Recursive Computing Module",
+    "Self-Harmonizing Power Core",
+    "Integrity Response Drones",
+    "Nano-Factory",
+    "Organic Mortar Applicators",
+    "Sterile Conduits",
+    "Wetware Mainframe"
+  ]
 }
