@@ -21,28 +21,32 @@ const replacements = {
 	p2product2input2: "9828"
 };
 
+let content = baseFile.toString();
+for ( const [k,v] of Object.entries( replacements ) ) {
+	content = content.replace( new RegExp( v, 'g' ), k );
+}
 
 tiers.P3.forEach( ( product ) => {
-	let output = baseFile.toString();
+	let output = content;
 	const schematic = planetRecipes.find( recipe => recipe.name === product );
 
 	if ( ! schematic?.name || schematic.requireTypeID.length > 2 ) {
 		return;
 	}
 
-	output = output.replace( new RegExp( replacements.p3Name, 'g' ), schematic.name );
-	output = output.replace( new RegExp( replacements.p3product, 'g' ), schematic.typeID );
+	output = output.replace( new RegExp( 'p3Name', 'g' ), schematic.name );
+	output = output.replace( new RegExp( 'p3product', 'g' ), schematic.typeID );
 
 	let p = 1;
 	schematic.requireTypeID.forEach( ( p2 ) => {
 
 		let i=1;
 		const p2Product = planetRecipes.find( r => r.typeID === p2 );
-		output = output.replace( new RegExp( replacements[`p2product${p}`], 'g' ), p2Product.typeID );
+		output = output.replace( new RegExp( new RegExp( `p2product${p}(?![a-zA-Z0-9_])` ), 'g' ), p2Product.typeID );
 
 		p2Product.requireTypeID.forEach( p1 => {
 			const p1Product = planetRecipes.find( r => r.typeID === p1 );
-			output = output.replace( new RegExp( replacements[`p2product${p}input${i}`], 'g' ), p1Product.typeID );
+			output = output.replace( new RegExp( `p2product${p}input${i}`, 'g' ), p1Product.typeID );
 			i++;
 		} )
 		p++;
