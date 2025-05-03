@@ -6,7 +6,7 @@ const planetRecipes = require( '../public/json/evePi/planetRecipes.json');
 const fs = require('fs');
 const path = require('path');
 
-const baseFile = fs.readFileSync( 'public/json/evePi/p1-p3-x2-base.json' );
+const baseFile = fs.readFileSync( 'public/json/evePi/p1-p3-x2-ccu5-base.json' );
 const titlePrefix = "P1-3.";
 
 // A list of items to replace.
