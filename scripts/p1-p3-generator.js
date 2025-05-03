@@ -6,8 +6,11 @@ const planetRecipes = require( '../public/json/evePi/planetRecipes.json');
 const fs = require('fs');
 const path = require('path');
 
-const baseFile = fs.readFileSync( 'public/json/evePi/p1-p3-x2-ccu5-base.json' );
-const titlePrefix = "P1-3.";
+const args = process.argv.slice(2);
+const ccu = `ccu${args[0]}-`
+
+const baseFile = fs.readFileSync( `public/json/evePi/p1-p3-x2-${ccu}base.json` );
+const titlePrefix = `Factory-1-3.${ccu.replace('-', '')}.`;
 
 // A list of items to replace.
 const replacements = {
